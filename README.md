@@ -1,4 +1,44 @@
-# JSON_ASSIGNMENT_6
+# ASSIGNMENT 1
+
+import json
+class Employee:
+  def __init__(self, name, dob, height, city, state):
+    self.name = name
+    self.dob = dob
+    self.height = height
+    self.city = city
+    self.state = state
+def main():
+  with open("employee.json", "r") as f:
+    employees = json.load(f)
+
+  employee_list = []
+  for employee in employees:
+    employee_list.append(Employee(employee["name"], employee["dob"], employee["height"], employee["city"], employee["state"]))
+
+  for employee in employee_list:
+    print(employee)
+
+if __name__ == "__main__":
+  main()
+
+
+# OUTPUT FOR ASSIGNMENT 1
+<__main__.Employee object at 0x0000026F66795F70>
+<__main__.Employee object at 0x0000026F66795FD0>
+<__main__.Employee object at 0x0000026F66795E80>
+<__main__.Employee object at 0x0000026F66795D60>
+<__main__.Employee object at 0x0000026F66795D00>
+<__main__.Employee object at 0x0000026F66795CA0>
+<__main__.Employee object at 0x0000026F66795C40>
+<__main__.Employee object at 0x0000026F66795B80>
+<__main__.Employee object at 0x0000026F66795B20>
+<__main__.Employee object at 0x0000026F66795AC0>
+<__main__.Employee object at 0x0000026F66795A60>
+<__main__.Employee object at 0x0000026F66795A00>
+
+
+
 # ASSIGNMENT 2
 class Dog:
     def __init__(self, name, age, coat_color):
